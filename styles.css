@@ -1,4 +1,87 @@
-02);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+:root{
+  --bg:#0f1226;
+  --card:#0f1724;
+  --accent1:#7551F6;
+  --accent2:#00C2FF;
+  --glass: rgba(255,255,255,0.06);
+  --muted: #9aa4bf;
+  --radius:14px;
+  --max:1200px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg,#071029 0%, #0f1226 100%);
+  color:#eaf0ff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  padding-bottom:60px;
+}
+
+/* Layout */
+.container{max-width:var(--max);margin:0 auto;padding:28px}
+.header-inner, .hero-inner, .promo-inner, .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.site-header{position:sticky;top:0;background:linear-gradient(180deg,rgba(11,14,26,0.75), rgba(11,14,26,0.45));backdrop-filter:blur(6px);z-index:50;border-bottom:1px solid rgba(255,255,255,0.03)}
+.brand{font-weight:800;color:white;text-decoration:none;font-size:18px}
+.nav a{color:var(--muted);text-decoration:none;margin:0 10px;font-weight:600}
+.nav a:hover{color:white}
+.cta{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:10px 14px;border-radius:10px;color:white;text-decoration:none;font-weight:700}
+
+/* Hero */
+.hero{padding:60px 0}
+.hero-inner{align-items:center}
+.hero-text{max-width:640px}
+.hero h1{font-size:48px;margin:0 0 10px;letter-spacing:0.5px}
+.lead{font-size:18px;color:#dfe9ff;margin:6px 0 12px}
+.sub{color:var(--muted);margin-bottom:18px}
+.hero-actions .btn{margin-right:12px}
+
+/* Buttons */
+.btn{
+  display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;
+  box-shadow:0 8px 30px rgba(117,81,246,0.12);
+}
+.btn.ghost, .ghost{
+  background:transparent;border:1px solid rgba(255,255,255,0.06);color:#dbe9ff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700
+}
+
+/* Visual */
+.card-visual{position:relative;width:320px;height:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.6)}
+.card-visual svg{position:absolute;inset:0;width:100%;height:100%}
+.mock{position:absolute;left:18px;top:18px;right:18px;bottom:18px;background:rgba(255,255,255,0.03);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.mock-header{height:10px;background:rgba(255,255,255,0.18);border-radius:6px;width:50%}
+.mock-line{height:8px;background:rgba(255,255,255,0.12);border-radius:6px}
+.mock-line.short{width:60%}
+.mock-grid{display:flex;gap:8px;margin-top:auto}
+.mock-grid > div{flex:1;height:36px;background:rgba(255,255,255,0.08);border-radius:8px}
+
+/* Services */
+.section{padding:48px 0}
+.section-title{font-size:28px;margin:0 0 8px}
+.section-sub{color:var(--muted);margin-bottom:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.card h3{margin:0 0 8px}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+.features-grid h4{margin:0 0 6px}
+
+/* Promo */
+.promo{margin:30px 0;padding:26px;border-radius:12px;background:linear-gradient(90deg, rgba(117,81,246,0.12), rgba(0,194,255,0.06));border:1px solid rgba(255,255,255,0.03)}
+
+/* Contacts */
+.contact-grid{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:18px}
+.contact-form{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.contact-form label{display:block;margin-bottom:12px;color:var(--muted);font-weight:600}
+.contact-form input,
+.contact-form textarea{width:100%;padding:12px;border-radius:10px;border:none;background:rgba(255,255,255,0.03);color:white;outline:none}
+.form-actions{display:flex;gap:12px;align-items:center;margin-top:10px}
+
+/* Contact info */
+.contact-info{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
 
 /* Footer */
 .site-footer{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(11,14,26,0.7),rgba(11,14,26,0.85));padding:12px 0;border-top:1px solid rgba(255,255,255,0.03)}
